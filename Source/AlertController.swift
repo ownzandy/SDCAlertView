@@ -7,7 +7,7 @@ import UIKit
 ///                on iPad.
 /// - alert:       The standard alert style that asks the user for information or confirmation.
 @objc(SDCAlertControllerStyle)
-open enum AlertControllerStyle: Int {
+public enum AlertControllerStyle: Int {
     case actionSheet
     case alert
 }
@@ -21,7 +21,7 @@ open enum AlertControllerStyle: Int {
 /// - vertical:   Display the actions vertically.
 /// - horizontal: Display the actions horizontally.
 @objc(SDCActionLayout)
-open enum ActionLayout: Int {
+public enum ActionLayout: Int {
     case automatic
     case vertical
     case horizontal
@@ -125,7 +125,7 @@ open class AlertController: UIViewController {
     /// - parameter attributedTitle:   An optional stylized title
     /// - parameter attributedMessage: An optional stylized message
     /// - parameter preferredStyle:    The preferred presentation style of the alert. Default is `alert`.
-    open convenience init(attributedTitle: NSAttributedString?, attributedMessage: NSAttributedString?,
+    public convenience init(attributedTitle: NSAttributedString?, attributedMessage: NSAttributedString?,
         preferredStyle: AlertControllerStyle = .alert)
     {
         self.init()
@@ -143,7 +143,7 @@ open class AlertController: UIViewController {
     /// - parameter title:          An optional title
     /// - parameter message:        An optional message
     /// - parameter preferredStyle: The preferred presentation style of the alert. Default is `alert`.
-    open convenience init(title: String?, message: String?, preferredStyle: AlertControllerStyle = .alert) {
+    public convenience init(title: String?, message: String?, preferredStyle: AlertControllerStyle = .alert) {
         self.init()
         self.preferredStyle = preferredStyle
         self.commonInit()
